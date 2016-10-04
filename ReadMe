@@ -1,0 +1,27 @@
+Daniel Cancelmo
+Project 4 -- Lob Pong
+Lab: Tues. & Thurs. 12:30-1:45
+TA: Patrick Conway
+I did not collaborate with anyone on this assignment.
+
+User's Guide:
+When the program is executed a GUI opens with instructions on how to play and options to change the color of the ball or the paddle.
+When the user presses "Play!" a new window opens and the game starts immediately.
+The paddle can be moved with the arrow keys or 'WASD'. The goal is to keep the ball in the air for as long as possible. 
+Their is a lives tracker, countdown timer, and lives tracker at the top. 
+If you keep the ball in the air when the countdown reaches zero, you move to the next level and the timer is reset with 5 seconds above the previous timer.
+When the ball falls out of the screen, you lose a life and the game resets to the level you were just on.
+When your lives reaches zero, the game ends. 
+The game becomes harder each level because you must keep the ball in the air for even more time.
+
+Two primary classes: 'PongGUI' and 'PongGame'. 
+'PongGame' has 'Canvas' class nested inside it.
+
+The main method is located in PongGUI class. It creates an instance of itself and sets visible. 
+The constructor creates the labels, combo boxes, and button and uses a box layout.
+The user can choose the color of the ball and the paddle or leave them at the default black.
+When the user presses the 'Play!' button and an instance of 'PongGame' is created, opening a new window. Ball and paddle color are passed in.
+The initial angle is randomly chosen from possible angles. The game starts immediately.
+Each time the player makes it to the next level more time is added to the countdown timer.
+When the ball falls out of the screen the game resets (except the levels are kept and countdown timer is set to it's previous value).
+When the user loses all three lives, the game ends.
